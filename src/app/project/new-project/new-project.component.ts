@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { OverlayContainer } from '@angular/cdk/overlay'; // for overwriting theme on dialoge
 
 @Component({
   selector: 'app-new-project',
@@ -10,8 +9,7 @@ import { OverlayContainer } from '@angular/cdk/overlay'; // for overwriting them
 export class NewProjectComponent implements OnInit {
 
   constructor(@Inject(MAT_DIALOG_DATA) private data,
-  private dialogRef: MatDialogRef<NewProjectComponent>,
-  private oc: OverlayContainer) { }
+  private dialogRef: MatDialogRef<NewProjectComponent>) { }
 
   ngOnInit() {
     console.log('data transfered to new project comp is:', JSON.stringify(this.data));
