@@ -33,14 +33,14 @@ export class ProjectListComponent implements OnInit {
   }
 
   openNewProjectDialog() {
-    const dialogRef = this.dialog.open(NewProjectComponent, {data: 'this is my date'});
-    dialogRef.afterClosed().subscribe(result => {
+    const newProjectDialogRef = this.dialog.open(NewProjectComponent, {data: 'this is my date'});
+    newProjectDialogRef.afterClosed().subscribe(result => {
       console.log("return message is:", result);
     })
   }
 
   launchInviteDialog() {
-    const dialogRef = this.dialog.open(InviteComponent);
+    const projectInvitedialogRef = this.dialog.open(InviteComponent);
   }
 
 }
