@@ -15,6 +15,8 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 1,
           desc: 'Task 1 : task one',
+          completed: true,
+          priority: 3,
           owner: {
             id: 1,
             name: 'Alice',
@@ -25,6 +27,8 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 2,
           desc: 'Task 2 : task two',
+          completed: false,
+          priority: 2,
           owner: {
             id: 1,
             name: 'Alice',
@@ -35,6 +39,8 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 3,
           desc: 'Task 3 : task three',
+          completed: false,
+          priority: 1,
           owner: {
             id: 1,
             name: 'Alice',
@@ -51,16 +57,21 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 1,
           desc: 'Task 1 : task one',
+          completed: false,
+          priority: 2,
           owner: {
             id: 1,
             name: 'Alice',
             avatar: 'avatars:svg-11'
           },
-          dueDate: new Date(),  
+          dueDate: new Date(), 
+          reminder: new Date(), 
         },
         {
           id: 2,
           desc: 'Task 2 : task two',
+          completed: false,
+          priority: 1,
           owner: {
             id: 1,
             name: 'Alice',
@@ -71,12 +82,15 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 3,
           desc: 'Task 3 : task three',
+          completed: false,
+          priority: 3,
           owner: {
             id: 1,
             name: 'Alice',
             avatar: 'avatars:svg-11'
           },
-          dueDate: new Date(),  
+          dueDate: new Date(), 
+          reminder: new Date(), 
         },
       ]
     },
@@ -87,6 +101,8 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 1,
           desc: 'Task 1 : task one',
+          completed: true,
+          priority: 1,
           owner: {
             id: 1,
             name: 'Alice',
@@ -97,6 +113,8 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 2,
           desc: 'Task 2 : task two',
+          completed: true,
+          priority: 2,
           owner: {
             id: 1,
             name: 'Alice',
@@ -107,6 +125,8 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 3,
           desc: 'Task 3 : task three',
+          completed: true,
+          priority: 3,
           owner: {
             id: 1,
             name: 'Alice',
