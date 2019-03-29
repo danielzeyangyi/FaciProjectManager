@@ -8,11 +8,13 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 })
 export class NewProjectComponent implements OnInit {
 
+  title: any;
+
   constructor(@Inject(MAT_DIALOG_DATA) private data,
   private dialogRef: MatDialogRef<NewProjectComponent>) { }
 
   ngOnInit() {
-    console.log('data transfered to new project comp is:', JSON.stringify(this.data));
+    this.title = this.data.title;
   }
 
   onClick() {

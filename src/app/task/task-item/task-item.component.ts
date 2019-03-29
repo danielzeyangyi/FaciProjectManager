@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MatCardAvatar } from '@angular/material';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-task-item',
@@ -9,10 +8,20 @@ import { MatCardAvatar } from '@angular/material';
 export class TaskItemComponent implements OnInit {
   @Input() item;
   @Input() avatar;
+  @Output() taskClicked = new EventEmitter<void>();
+
   constructor() { }
 
   ngOnInit() {
     this.avatar = this.item.owner ? this.item.owner.avatar : 'unassigned';
+  }
+
+  onItemClick() {
+    this.taskClicked.emit();
+  }
+
+  onCheckboxClick(ev : Event) {
+    ev.stopPropagation();
   }
 
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewTaskComponent } from '../new-task/new-task.component';
 import { CopyTaskComponent } from '../copy-task/copy-task.component';
+import { ComfirmDialogComponent } from 'src/app/shared/comfirm-dialog/comfirm-dialog.component';
+import { NewTaskListComponent } from '../new-task-list/new-task-list.component';
 
 @Component({
   selector: 'app-task-home',
@@ -147,10 +149,48 @@ export class TaskHomeComponent implements OnInit {
   }
 
   launchNewTaskDialog() {
-    this.dialog.open(NewTaskComponent);
+    const dialogRef = this.dialog.open(NewTaskComponent, {data: {title: 'Create new task: '}});
   }
 
   launchCopyTaskDialog() {
     const dialogRef = this.dialog.open(CopyTaskComponent, {data: {lists: this.lists}});
   }
+
+  launchEditTaskDialog(task) {
+    const dialogRef = this.dialog.open(NewTaskComponent, 
+      {data: {title: 'Edit task: ', task: task}});
+  }
+
+  launchDelListDialog() {
+    const dialogRef = this.dialog.open(ComfirmDialogComponent, 
+      {data: 
+        {title: 'Delete this list: ',
+         content: 'Are you sure you want to delete this list?'}});
+    
+      dialogRef.afterClosed().subscribe(result => {
+          console.log(result);
+      })
+  }
+
+  launchEditListDialog() {
+    const dialogRef = this.dialog.open(NewTaskListComponent, 
+      {data: 
+        {title: 'Edit this list name: '}});
+    
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+    })
+  }
+
+  launchNewListDialog() {
+    const dialogRef = this.dialog.open(NewTaskListComponent, 
+      {data: 
+        {title: 'Create new list: '}});
+  
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+    });
+  }
+
+
 }
