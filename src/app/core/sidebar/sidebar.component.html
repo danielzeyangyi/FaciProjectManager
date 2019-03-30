@@ -1,19 +1,19 @@
 <mat-nav-list>
     <h3 matSubheader>Tasks</h3>
-    <mat-list-item>
-      <mat-icon matListIcon svgIcon="projects"></mat-icon>
-      <span matLine >Task Dashboard</span>
-      <span matLine matSubheader>View all your tasks</span>      
+    <mat-list-item [routerLink]="['/project']" (click)="onNavClick()">
+        <mat-icon matListIcon svgIcon="projects" ></mat-icon>
+        <span matLine >Task Dashboard</span>
+        <span matLine matSubheader>View all your projects</span>      
     </mat-list-item>
     <mat-divider></mat-divider>
     <h3 matSubheader>Calander</h3>
-    <mat-list-item role="listitem">
+    <mat-list-item role="listitem" [routerLink]="['/tasklists']" (click)="onNavClick()">
         <mat-icon matListIcon svgIcon="month"></mat-icon>
         <span matLine>Monthly View</span>
         <span matLine matSubheader>View all your monthly tasks</span>      
     </mat-list-item>
     <mat-list-item role="listitem">
-        <mat-icon matListIcon svgIcon="week"></mat-icon>
+        <mat-icon matListIcon svgIcon="week"></mat-icon> 
         <span matLine>Weekly View</span>
         <span matLine matSubheader>View all your weekly tasks</span>      
     </mat-list-item>

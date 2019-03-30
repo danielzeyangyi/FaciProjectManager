@@ -15,7 +15,9 @@
 }
 
 .listContainer {
-    flex: 0 0 360px;
+    flex: 0 0 20%;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
+    border: solid 1px #ddd;
+    margin: 0 20px 0 0;
 }

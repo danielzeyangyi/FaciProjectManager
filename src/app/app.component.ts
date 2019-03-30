@@ -4,11 +4,14 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  
+  overlayContainerClasses: any;  
   darkTheme = false;
-  overlayContainerClasses: any;
+
+  sqaureState: string;
 
   constructor( private oc: OverlayContainer) {
     this.overlayContainerClasses = this.oc.getContainerElement();
