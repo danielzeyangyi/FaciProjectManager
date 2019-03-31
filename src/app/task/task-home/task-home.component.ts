@@ -22,6 +22,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id: 1,
       name: 'To Do',
+      order: 1,
       tasks: [
         {
           id: 1,
@@ -64,6 +65,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id: 2,
       name: 'On Going',
+      order: 2,
       tasks: [
         {
           id: 1,
@@ -108,6 +110,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id: 3,
       name: 'Finished',
+      order: 3,
       tasks: [
         {
           id: 1,
@@ -204,7 +207,13 @@ export class TaskHomeComponent implements OnInit {
         console.log('handling item');
         break;
       case 'task-list':
+        console.log('handleMove srcData', srcData);
+        console.log('handleMove list', list);
         console.log('handling list');
+        const srcList = srcData.data;
+        const tmpOrder = srcList.order;
+        srcList.order = list.order;
+        list.order = tmpOrder;
         break;
       default:
         break;
