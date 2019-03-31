@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
 import { InviteComponent } from '../invite/invite.component';
@@ -11,7 +11,8 @@ import { slideToRight } from 'src/app/animation/router.anim';
   styleUrls: ['./project-list.component.scss'],
   animations: [
     slideToRight,
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class ProjectListComponent implements OnInit {
@@ -36,7 +37,7 @@ export class ProjectListComponent implements OnInit {
     }
   ]
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
   }
@@ -46,6 +47,8 @@ export class ProjectListComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log("return message is:", result);
     })
+
+    this.cd.markForCheck();
   }
 
   launchProjectEditDialog(project) {
@@ -67,5 +70,7 @@ export class ProjectListComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
         console.log(result);
     })
+
+    this.cd.markForCheck();
   }
 }
