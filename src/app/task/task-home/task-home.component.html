@@ -17,6 +17,7 @@
     (moveList)="launchCopyTaskDialog()"
     (delList)="launchDelListDialog()"
     (onEditList)="launchEditListDialog()"></app-task-header>
+    <app-quick-task (quickTask)="handleQuickTask($event)"></app-quick-task>
     <app-task-item
     [item]="task"
     (taskClicked)="launchEditTaskDialog(task)"

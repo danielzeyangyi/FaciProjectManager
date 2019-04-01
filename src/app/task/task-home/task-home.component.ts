@@ -220,4 +220,7 @@ export class TaskHomeComponent implements OnInit {
     }
   }
 
+  handleQuickTask(desc: string) {
+    console.log("task home has received", desc);
+  }
 }

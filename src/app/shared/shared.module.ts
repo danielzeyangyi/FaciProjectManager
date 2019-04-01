@@ -22,6 +22,7 @@ import {
 } from '@angular/material';
 import { ComfirmDialogComponent } from './comfirm-dialog/comfirm-dialog.component';
 import { DirectiveModule } from '../directive/directive.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ComfirmDialogComponent],
@@ -46,6 +47,8 @@ import { DirectiveModule } from '../directive/directive.module';
     MatSelectModule,
     MatSidenavModule,
     DirectiveModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     CommonModule,
@@ -68,6 +71,8 @@ import { DirectiveModule } from '../directive/directive.module';
     MatSelectModule,
     MatSidenavModule,
     DirectiveModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   entryComponents: [
     ComfirmDialogComponent,
