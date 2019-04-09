@@ -1,0 +1,13 @@
+GET http://localhost:3000/projects?members_like=2
+
+###
+GET http://localhost:3000/projects
+
+###
+POST http://localhost:3000/projects?members_like=2
+Content-Type: application/json
+
+###
+DELETE  http://localhost:3000/taskLists/BylTyXiM-b
+Content-Type: application/json
+

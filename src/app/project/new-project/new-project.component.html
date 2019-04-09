@@ -1,15 +1,22 @@
-<form>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form, $event)">
   <h2 mat-dialog-title>{{title}}</h2>
   <mat-dialog-content>
       <mat-form-field class="full-width">
-          <input matInput type="text" placeholder="Project Name">
+          <input matInput type="text" placeholder="Project Name" formControlName="name">
       </mat-form-field>
       <mat-form-field class="full-width">
-        <input matInput type="text" placeholder="Project Description">
+        <input matInput type="text" placeholder="Project Description" formControlName="desc">
       </mat-form-field>
+      <app-image-list-select 
+          [useSvgIcon]="false"
+          [cols]="6" 
+          [title]="'Cover image: '"
+          [items]="coverImages" 
+          formControlName="coverImg">
+      </app-image-list-select>
   </mat-dialog-content>
   <div mat-dialog-actions>
-      <button mat-raised-button color="primary" type="button" (click)="onClick()">Save</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Save</button>
       <button mat-button mat-dialog-close type="button">Close</button>
   </div>
 </form>
