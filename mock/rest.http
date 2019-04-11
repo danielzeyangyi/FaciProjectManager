@@ -1,7 +1,7 @@
 GET http://localhost:3000/projects?members_like=2
 
 ###
-GET http://localhost:3000/projects
+GET http://localhost:3000/users?projectId="S1XDmtcF-"
 
 ###
 POST http://localhost:3000/projects?members_like=2

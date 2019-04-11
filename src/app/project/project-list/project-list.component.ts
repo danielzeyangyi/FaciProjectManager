@@ -65,7 +65,6 @@ export class ProjectListComponent implements OnInit, OnDestroy {
         this.projects = [...this.projects, project];
         this.cd.markForCheck();
       });
-
   }
 
   launchProjectUpdateDialog(project: Project) {
@@ -92,7 +91,7 @@ export class ProjectListComponent implements OnInit, OnDestroy {
   }
 
   launchInviteDialog() {
-    const dialogRef = this.dialog.open(InviteComponent);
+    const dialogRef = this.dialog.open(InviteComponent, {data: {members: [] }});
   }
 
   launchDelConfirmDialog(project) {

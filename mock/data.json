@@ -16,9 +16,9 @@
   "users": [
     {
       "password": "wp123456",
-      "name": "王芃",
+      "name": "Allen",
       "avatar": "avatars:svg-1",
-      "email": "wpcfan@163.com",
+      "email": "allenChan@gmail.com",
       "id": "37489e0c-df34-c261-71c4-ce75357e3035",
       "projectIds": [
         "Sk2HaTagb",
@@ -38,9 +38,9 @@
     },
     {
       "password": "Ls123456",
-      "name": "李四",
+      "name": "Adam",
       "avatar": "avatars:svg-2",
-      "email": "lisi@163.com",
+      "email": "AdamBuckler@gmail.com",
       "id": "BkkDvwee-",
       "projectIds": [
         "Sk2HaTagb",
@@ -120,7 +120,7 @@
   ],
   "tasks": [
     {
-      "desc": "吃晚餐",
+      "desc": "task 1",
       "taskListId": "BkenST66lb",
       "ownerId": "37489e0c-df34-c261-71c4-ce75357e3035",
       "completed": true,
@@ -138,7 +138,7 @@
     },
     {
       "id": "2",
-      "desc": "赶快出发去万达",
+      "desc": "task 2",
       "taskListId": "SkG3Ba6Tgb",
       "ownerId": "37489e0c-df34-c261-71c4-ce75357e3035",
       "completed": false,
@@ -154,7 +154,7 @@
     },
     {
       "id": "3",
-      "desc": "什么情况啊",
+      "desc": "task 3",
       "taskListId": "SkG3Ba6Tgb",
       "ownerId": "BkkDvwee-",
       "completed": false,
@@ -167,7 +167,7 @@
     },
     {
       "taskListId": "BkWpk7jGZb",
-      "desc": "增加统计报表功能",
+      "desc": "task 4",
       "completed": false,
       "ownerId": "37489e0c-df34-c261-71c4-ce75357e3035",
       "participantIds": [],
@@ -180,7 +180,7 @@
     },
     {
       "taskListId": "BkWpk7jGZb",
-      "desc": "库存管理 -- 出库操作 API",
+      "desc": "task 5",
       "completed": false,
       "ownerId": "BkkDvwee-",
       "participantIds": [
@@ -195,7 +195,7 @@
     },
     {
       "taskListId": "H1fTyXjMWW",
-      "desc": "用户可以签入签出设备",
+      "desc": "task 6",
       "completed": true,
       "ownerId": "37489e0c-df34-c261-71c4-ce75357e3035",
       "participantIds": [],
@@ -208,7 +208,7 @@
     },
     {
       "taskListId": "BkWpk7jGZb",
-      "desc": "什么情况啊？",
+      "desc": "task 7",
       "completed": false,
       "ownerId": "37489e0c-df34-c261-71c4-ce75357e3035",
       "participantIds": [],

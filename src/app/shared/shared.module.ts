@@ -19,14 +19,20 @@ import {
   MatNativeDateModule,
   MatSelectModule,
   MatSidenavModule,
+  MatChipsModule,
 } from '@angular/material';
 import { ComfirmDialogComponent } from './comfirm-dialog/comfirm-dialog.component';
 import { DirectiveModule } from '../directive/directive.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
+import { ChipsListComponent } from './chips-list/chips-list.component';
 
 @NgModule({
-  declarations: [ComfirmDialogComponent, ImageListSelectComponent],
+  declarations: [
+    ComfirmDialogComponent, 
+    ImageListSelectComponent, 
+    ChipsListComponent
+  ],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -50,6 +56,7 @@ import { ImageListSelectComponent } from './image-list-select/image-list-select.
     DirectiveModule,
     FormsModule,
     ReactiveFormsModule,
+    MatChipsModule,
   ],
   exports: [
     CommonModule,
@@ -75,6 +82,8 @@ import { ImageListSelectComponent } from './image-list-select/image-list-select.
     FormsModule,
     ReactiveFormsModule,
     ImageListSelectComponent,
+    ChipsListComponent,
+    MatChipsModule,
   ],
   entryComponents: [
     ComfirmDialogComponent,

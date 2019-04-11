@@ -20,7 +20,7 @@ export class UserService {
 
   searchUsers(filterStr: string): Observable<User[]> {
     const uri = `${this.config.uri}/${this.domain}`;
-    const params = new HttpParams().set('email_like', filterStr);
+    const params = new HttpParams().set('name_like', filterStr);
     return this.http.get<User[]>(uri, { params });
   }
 
